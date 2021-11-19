@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.RegisterPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Padding="29" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <StackLayout >
+                <Image Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Source="Logoblack.png"
+                   HeightRequest="90"
+                   Aspect="AspectFit"
+                   Margin="14"/>
+                <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Registrarse"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                      
+                FontSize="20"
+                   
+                   HorizontalTextAlignment="Center"
+                   />
+                <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Text="Ingrese sus credenciales para continuar"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   FontAttributes="None"
+                   TextColor="Gray"               
+                   HorizontalTextAlignment="Center"
+                   
+                   />
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <ScrollView>
+
+                    <Entry x:Name="txtNombre" Placeholder="Nombres y Apellidos" Keyboard="Text" Text="{Binding NameTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}"></Entry>
+
+                </ScrollView>
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <ScrollView>
+
+                    <Entry x:Name="txtEmail" Placeholder="usuario@gmail.com" AutomationId="Email" Keyboard="Email" Text="{Binding EmailTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}"></Entry>
+
+                </ScrollView>
+            </StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+                <ScrollView>
+
+                    <Entry x:Name="txtContrasena" Placeholder="********************" IsPassword="True" Text="{Binding PasswordTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}"></Entry>
+
+                </ScrollView>
+            </StackLayout>
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Text="Al continuar, acepta nuestros Términos de servicio.y Política de privacidad."
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   FontAttributes="None"
+                   TextColor="Gray"               
+                   HorizontalTextAlignment="Center"
+                   Margin="12"
+                   />
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Crear Cuenta"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#53B175"
+                    HeightRequest="52"
+                    WidthRequest="1400"
+                    CornerRadius="30" Padding="10"
+                    x:Name="btnEegistrar"
+                    Clicked="BtnRegistrar_Clicked"/>
+
+
+            <Button
+                            Text="¿Ya tienes una cuenta? Iniciar Sesión"
+                            TextColor="{OnPlatform iOS=Black}"
+                            FontSize="{OnPlatform Android=12,iOS=12}"
+                            BackgroundColor="White"
+                            Clicked="regresar_Login"
+
+                            />
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.ExplorarPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Grid.Column="0" WidthRequest="325" HeightRequest="28" HorizontalOptions="Center" Margin="0,0,0,0">
+
+                <ScrollView>
+                    <StackLayout Padding="10">
+                        <Frame Padding="0,0,0,0" HasShadow="True" CornerRadius="15" WidthRequest="400" >
+                            <SearchBar Placeholder="Busqueda"
+                                   CancelButtonColor="Black"
+                                   PlaceholderColor="Black"
+                                   TextColor="Black"
+                                   TextTransform="None"
+                                   HorizontalTextAlignment="Start"
+                                   FontSize="14"
+                                   FontAttributes="Bold"  BackgroundColor="WhiteSmoke"/>
+                        </Frame>
+                    </StackLayout>
+
+                </ScrollView>
+
+                <ScrollView>
+                    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                          VerticalOptions="CenterAndExpand"
+                          ColumnDefinitions="*,*"
+                          Padding="0">
+                        <Frame Margin="9"
+                               BorderColor="Black"
+                               CornerRadius="10"
+                               HeightRequest="160"
+                               WidthRequest="130"
+   
+                               HorizontalOptions="Start"
+                               VerticalOptions="Start"  
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="1">
+                            <Image Source="ModaHombre.jpg"
+                                     Aspect="AspectFill"
+                                     Margin="-20"
+                                     HeightRequest="100"
+                                     WidthRequest="100" />
+                        </Frame>
+                        <Frame Margin="9"
+                               BorderColor="Black"
+                               CornerRadius="10"
+                               HeightRequest="160"
+                               WidthRequest="130"
+   
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Start" 
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               Grid.ColumnSpan="1">
+                            <Image Source="ModaMujer.jpg"
+                                     Aspect="AspectFill"
+                                     Margin="-20"
+                                     HeightRequest="100"
+                                     WidthRequest="100" />
+                        </Frame>
+                        <Frame Margin="9"
+                               BorderColor="Black"
+                               CornerRadius="10"
+                               HeightRequest="160"
+                               WidthRequest="130"
+   
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Start" 
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="1">
+                            <Image Source="Electronicos.jpg"
+                                     Aspect="AspectFill"
+                                     Margin="-20"
+                                     HeightRequest="100"
+                                     WidthRequest="100" />
+                        </Frame>
+                        <Frame Margin="9"
+                               BorderColor="Black"
+                               CornerRadius="10"
+                               HeightRequest="160"
+                               WidthRequest="130"
+   
+                               HorizontalOptions="EndAndExpand"
+                               VerticalOptions="Start" 
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               Grid.ColumnSpan="1">
+                            <Image Source="Muebles.jpg"
+                                     Aspect="AspectFill"
+                                     Margin="-20"
+                                     HeightRequest="100"
+                                     WidthRequest="100" />
+                        </Frame>
+
+
+
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

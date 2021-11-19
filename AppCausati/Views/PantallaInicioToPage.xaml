@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.PantallaInicioToPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              VerticalOptions="CenterAndExpand"
+              ColumnDefinitions="*,*"
+              Padding="30,20,30,0">
+                <!--boton retroceder-->
+
+
+                <!--skip Label-->
+
+                <!--imagen principal con el fondo-->
+
+                <Image Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Source="Logo.png"
+                   HeightRequest="255"
+                   
+                   
+                   Aspect="AspectFit"
+                   
+                   />
+
+                <!--Título-->
+
+
+                <!--Descripción-->
+                <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Bienvenido a nuestra tienda"
+                   FontAttributes="Bold"
+                   TextColor="WhiteSmoke"
+               
+                   Margin="5,5"
+                   HorizontalTextAlignment="Center"
+                   FontSize="30"/>
+
+                <Label Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Tú pedido en tan solo un click"
+                   FontAttributes="None"
+                   TextColor="WhiteSmoke"
+                       Margin="5,10"
+               
+                   
+                   HorizontalTextAlignment="Center"
+                   FontSize="16"/>
+
+
+
+                <!--Boton circular-->
+                <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Empezar"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#53B175"
+                    HeightRequest="72"
+                    WidthRequest="2800"
+                    CornerRadius="30"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.PantallaInicioPage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+              VerticalOptions="CenterAndExpand"
+              ColumnDefinitions="*,*"
+              Padding="30,20,30,0">
+            <!--boton retroceder-->
+            <!--Button Grid.Row="0" 
+                    Grid.Column="0"
+                    ImageSource="ArrowLeft.png"
+                    HorizontalOptions="Start"
+                    WidthRequest="50"
+                    BackgroundColor="#fee489"
+                    CornerRadius="15"/-->
+
+            <!--skip Label-->
+
+
+            <!--imagen principal con el fondo-->
+
+            <Image Grid.Row="2"
+                   Grid.Column="0"
+                   
+                   HeightRequest="200"
+                   
+                  
+                   Grid.ColumnSpan="2"
+                   Aspect="AspectFit"
+                   Source="logo.png"/>
+
+
+
+            <!--Título-->
+
+
+
+
+            <!--Boton circular-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

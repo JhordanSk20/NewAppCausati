@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.LoginPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Padding="29" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Image Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Source="Logoblack.png"
+                   HeightRequest="90"
+                   Aspect="AspectFit"
+                   Margin="14"/>
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="Iniciar Sesión "
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                      
+                FontSize="20"
+                   
+                   HorizontalTextAlignment="Center"
+                   />
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Text="Ingrese su correo electrónico y contraseña"
+                   FontSize="15"
+                   HorizontalOptions="Start"
+                   FontAttributes="None"
+                   TextColor="Gray"               
+                   HorizontalTextAlignment="Center"
+                   
+                   />
+
+
+
+            <ScrollView>
+
+                <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email" Text="{Binding EmailTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}" ></Entry>
+
+            </ScrollView>
+            <ScrollView>
+
+                <Entry x:Name="txtContrasena" Placeholder="**************" IsPassword="True" Text="{Binding PasswordTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}"></Entry>
+
+            </ScrollView>
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text="¿Olvidaste tu contraseña? "
+                   HorizontalOptions="End"
+                   FontAttributes="Bold"
+                   TextColor="Gray"
+                  
+                      
+                FontSize="13"
+                   
+                   HorizontalTextAlignment="Center"
+                   Margin="10"
+                   />
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Iniciar Sesión"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#53B175"
+                    HeightRequest="52"
+                    WidthRequest="1400"
+                    CornerRadius="30"
+                    x:Name="btnIniciarSesion"
+                    Command="{Binding LoginCommand}"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    />
+            
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Text=" O "
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                  
+                      
+                FontSize="19"
+                   
+                   HorizontalTextAlignment="Center"
+                   Margin="10"
+                   />
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Inicie Sesión con Google"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#5383EC"
+                    HeightRequest="52"
+                    WidthRequest="1400"
+                    CornerRadius="30"/>
+            <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Inicie Sesión con Facebook"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#4A66AC"
+                    HeightRequest="52"
+                    WidthRequest="1400"
+                    CornerRadius="30"/>
+
+            <Button
+                 x:Name="btnRegistrarse" 
+                    Text="¿No tienes una cuenta? Registrate"
+                    TextColor="{OnPlatform iOS=Black}"
+                    FontSize="{OnPlatform Android=12,iOS=12}"
+                    BackgroundColor="White"
+                    IsEnabled="{Binding IsEnabledTxt}"
+                    Clicked="ir_register"/>
+            
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
