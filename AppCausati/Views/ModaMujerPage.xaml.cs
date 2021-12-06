@@ -1,5 +1,4 @@
-﻿using AppCausati.Models;
-using AppCausati.ViewModels;
+﻿using AppCausati.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +11,13 @@ using Xamarin.Forms.Xaml;
 namespace AppCausati.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CarroPage : ContentPage
+    public partial class ModaMujerPage : ContentPage
     {
-      
-        public CarroPage()
+        public ModaMujerPage()
         {
-            InitializeComponent();
-            BindingContext = new ModaMujerViewModel();
+           InitializeComponent();
+                BindingContext = new ModaMujerViewModel();
 
         }
-       
     }
 }

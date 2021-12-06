@@ -16,5 +16,9 @@ namespace AppCausati.Views
         {
             InitializeComponent();
         }
+        private async void ir_login(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new RegisterPage());
+        }
     }
 }

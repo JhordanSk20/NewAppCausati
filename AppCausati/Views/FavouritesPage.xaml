@@ -2,11 +2,80 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCausati.Views.FavouritesPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <Shell.TitleView>
+        <StackLayout >
+            <Image Source="logo_small.png" WidthRequest="175" HorizontalOptions="Center" Margin="0,10,0,0"/>
         </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Grid.Column="0" WidthRequest="325" HeightRequest="28" HorizontalOptions="Center" Margin="0,0,0,0">
+                <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*" Padding="-28,-22,-10,10" >
+                    <!-- Background Image-->
+
+                    <Label Grid.Column="1" Grid.Row="0" Text="Favorito" TextColor="Black" Padding="-100,35,8,0" HeightRequest="100" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" FontSize="19"/>
+                    <!-- Back Button-->
+                    <!--<Button Grid.Column="0" Grid.Row="0" CornerRadius="16" ImageSource="Arrow" BackgroundColor="White" WidthRequest="40" HeightRequest="40" Margin="{ OnPlatform Android='25,30,0,0' , iOS='25,60,0,0'}"  VerticalOptions="Start" HorizontalOptions="Start"/>-->
+                    <!--Take a Tour Button-->
+                    <!--Button Grid.Column="1" Grid.Row="0" CornerRadius="10" ImageSource="Tour" BackgroundColor="Green" Text="TAKE A 3D TOUR" TextColor="White" Margin="{ OnPlatform Android='0,30,25,0' , iOS='0,60,25,0'}"  FontSize="{OnPlatform iOS='12', Android='9'}" HeightRequest="40" WidthRequest="170" VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>-->
+
+                    <!-- Here add the code that is being explained in the step number two-->
+                </Grid>
+                <CollectionView  Grid.Column="0" Margin="0,-60,-10,-10"
+                                Grid.Row="2" Grid.ColumnSpan="4"
+                                VerticalScrollBarVisibility="Never" 
+                                ItemsSource="{Binding modamujer}"
+                                VerticalOptions="CenterAndExpand" >
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"
+                                                    Span="1" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10,0,17,14">
+                                <Frame Padding="0,4,-67,14" WidthRequest="500" HeightRequest="100" VerticalOptions="CenterAndExpand" CornerRadius="20" HorizontalOptions="Center" HasShadow="True" >
+                                    <Grid RowDefinitions="*,Auto,Auto" ColumnDefinitions="*,Auto">
+                                        <Frame Grid.Column="0" Grid.Row="1" IsClippedToBounds="True" CornerRadius="25" HasShadow="False" Padding="14" Margin="-35,-10,220,-30" >
+                                            <Image Source="{Binding Image}" Aspect="AspectFit" />
+                                        </Frame>
+
+                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Name}" FontAttributes="Bold" Padding="140,40,10,0"/>
+                                        <Label Grid.Column="0" Grid.Row="1" Text="{Binding Price}" TextColor="{StaticResource MainColor}" Padding="140,70,10,0" FontAttributes="Bold"/>
+                                        <Grid Margin="-70" Padding="10,40,-150,-20">
+                                            <Button Grid.Column="1" Padding="10,-0,10,10" Text=">" FontSize="24" TextColor="WhiteSmoke" TextTransform="Lowercase"  Grid.Row="01" Grid.RowSpan="2"  HorizontalOptions="Start" WidthRequest="35" HeightRequest="38" CornerRadius="8" VerticalOptions="End"  BackgroundColor="#53B175"/>
+                                        </Grid>
+
+
+                                    </Grid>
+
+                                </Frame>
+
+                            </StackLayout>
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                <Frame>
+                    <Button Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Text="Añadir todo al carro de compras"
+                    TextColor="White"
+                    ImageSource="WhiteArrow.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    BackgroundColor="#53B175"
+                    HeightRequest="52"
+                    WidthRequest="1400"
+                    CornerRadius="30"/>
+                </Frame>
+
+            </StackLayout>
+
+        </ScrollView>
+
+
     </ContentPage.Content>
 </ContentPage>

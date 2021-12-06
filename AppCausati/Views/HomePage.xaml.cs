@@ -25,5 +25,22 @@ namespace AppCausati.Views
         {
 
         }
+        
+
+        private void ir_detail_product(object sender, SelectionChangedEventArgs e)
+        {
+            var c = e.CurrentSelection.First();
+            Models.Product model = e.CurrentSelection.FirstOrDefault() as Models.Product;
+            string id = model.Id.ToString();
+            string nombre = model.Name;
+            string imagen = model.Image;
+            string precio = model.Price.ToString();
+            Navigation.PushModalAsync(new ProductDetail (id, nombre, imagen, precio));
+
+
+
+        }
+
+
     }
 }

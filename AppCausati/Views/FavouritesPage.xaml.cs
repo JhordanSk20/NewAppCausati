@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCausati.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace AppCausati.Views
         public FavouritesPage()
         {
             InitializeComponent();
+            BindingContext = new ModaMujerViewModel();
         }
     }
 }

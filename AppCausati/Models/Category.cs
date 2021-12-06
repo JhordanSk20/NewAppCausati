@@ -6,7 +6,9 @@ namespace AppCausati.Models
 {
     public class Category
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryPoster { get; set; }
+        public string Image { get; set; }
     }
 }

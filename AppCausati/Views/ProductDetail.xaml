@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCausati.Views.ProductDetail">
+    <Shell.TitleView>
+        <StackLayout >
+            <Image Source="logo_small.png" WidthRequest="175" HorizontalOptions="Center" Margin="0,10,0,0"/>
+        </StackLayout>
+    </Shell.TitleView>
+   
+        <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Grid.Column="0" WidthRequest="325" HeightRequest="28" HorizontalOptions="Center" Margin="0,0,0,0">
+                <Grid RowDefinitions="Auto,*" ColumnDefinitions="*,*" Padding="-28,-12,-10,10" >
+                    <!-- Background Image-->
+                    <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Aspect="AspectFill" Opacity="0.7" Source="Room"/>
+                    <!-- Back Button-->
+                    <Button Grid.Column="0" Grid.Row="0" CornerRadius="16" ImageSource="Arrow" BackgroundColor="White" WidthRequest="40" HeightRequest="40" Margin="{ OnPlatform Android='25,30,0,0' , iOS='25,60,0,0'}"  VerticalOptions="Start" HorizontalOptions="Start" Clicked="return_home" />
+                    <!--Take a Tour Button-->
+                    <Button Grid.Column="1" Grid.Row="0" CornerRadius="10" ImageSource="Tour" BackgroundColor="Green" Text="Mas especificaciones" TextColor="White" Margin="{ OnPlatform Android='0,30,25,0' , iOS='0,60,25,0'}"  FontSize="{OnPlatform iOS='12', Android='9'}" HeightRequest="40" WidthRequest="170" VerticalOptions="Start" HorizontalOptions="EndAndExpand"/>
+
+                    <!-- Here add the code that is being explained in the step number two-->
+                </Grid>
+
+
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,*">
+
+
+                    <!-- Circle shape-->
+
+                    <!-- Circle shape text-->
+
+
+                    <!-- Main sneaker -->
+                    <Image Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Source="ZapatillasInicio" HorizontalOptions="Center" VerticalOptions="Center" Aspect="AspectFill" HeightRequest="250" x:Name="txtimage" />
+                    <!-- Sneaker size -->
+                    <StackLayout Grid.Column="0" Grid.Row="2" Padding="35,-20,0,0" VerticalOptions="Start" Orientation="Horizontal">
+                        <Label Text="US 7" FontAttributes="Bold"/>
+                        <Image Source="Arrow" />
+                    </StackLayout>
+
+                </Grid>
+                <Label Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="3" Padding="22,-0,10,0" Text="Zapatillas DC            S/150" TextColor="Black" FontAttributes="Bold" FontSize="25" x:Name="txtprice"/>
+                <!-- Colors selector -->
+              
+                <!-- Colors selector -->
+               
+               
+                <Grid>
+
+                </Grid>
+                <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Padding="20,0,0,20" BackgroundColor="Transparent" VerticalOptions="FillAndExpand" RowDefinitions="Auto,Auto,*" ColumnDefinitions="Auto,*" >
+
+                    
+                    <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="Empeine de malla y lycra con revestimientos de gamuza y cuero sintético
+                                  " LineHeight="1.4" x:Name="txtdescription"/>
+                 
+
+                    <Button Grid.Row="4" Grid.Column="0"  VerticalOptions="Center" BorderWidth="2" HeightRequest="60" CornerRadius="10" WidthRequest="60" BackgroundColor="Transparent" BorderColor="Transparent" ImageSource="HeartOne"/>
+
+                    <Button Grid.Row="4" Grid.Column="1" Margin="10,0,20,0" CornerRadius="20" VerticalOptions="Center" HeightRequest="60" Background="green" TextColor="White" FontAttributes="Bold" Text="AGREGAR AL CARRO"/>
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+    
+
+</ContentPage>

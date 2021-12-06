@@ -2,22 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCausati.Views.CuentaPage">
+    <Shell.TitleView>
+        <StackLayout >
+            <Image Source="logo_small.png" WidthRequest="175" HorizontalOptions="Center" Margin="0,10,0,0"/>
+
+        </StackLayout>
+    </Shell.TitleView>
+
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame Grid.Row="0" Padding="20" Margin="10" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"  >
                 <StackLayout>
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="5">
-                        <Label Font="20" TextColor="#860000">Mis Datos</Label>
+                        <Label Font="20" TextColor="blue" FontAttributes="Bold">MIS DATOS</Label>
+                        <Image Source="user.png" WidthRequest="55" HorizontalOptions="Center" Margin="0,10,0,0"/>
                     </StackLayout>
                     <Entry x:Name="txtEmail" Placeholder="jhordan@gmail.com" TextColor="Black" Text="" IsEnabled="False"/>
                     <Entry x:Name="txtNombre" Placeholder="Nombres" TextColor="Black" Text=""/>
                     <Entry x:Name="txtApellido" Placeholder="Apellidos" TextColor="Black" Text=""/>
                     <Entry x:Name="txtDocumento" Placeholder="Documento Identidad" TextColor="Black" Text=""/>
-                    <Button x:Name="btnGuardarCambios" Text="Guardar Cambios" BackgroundColor="#53B175" TextColor="White" Clicked="BtnGuardarCambios_Clicked"/>
-                    <Button x:Name="btnCerrarSesion" Text="Cerrar Sesión" BackgroundColor="#860000" TextColor="White" Clicked="BtnCerrarSesion_Clicked" />
+                    <Button x:Name="btnGuardarCambios" Text="Guardar Cambios" BackgroundColor="#53B175" TextColor="White" />
+                    <Button x:Name="btnCerrarSesion" Text="Cerrar Sesión" BackgroundColor="blue" TextColor="White"  />
                 </StackLayout>
             </Frame>
         </Grid>

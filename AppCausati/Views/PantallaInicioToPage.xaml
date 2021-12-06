@@ -67,7 +67,8 @@
                     BackgroundColor="#53B175"
                     HeightRequest="72"
                     WidthRequest="2800"
-                    CornerRadius="30"/>
+                    CornerRadius="30"
+                        />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

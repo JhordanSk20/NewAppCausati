@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using AppCausati.Views;
+using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,12 +9,13 @@ namespace AppCausati
 {
     public partial class App : Application
     {
+     
         public App()
         {
             InitializeComponent();
 
-            //MainPage = new MainPage();
-            MainPage = new AppShell();
+            MainPage = new LoginPage ();
+
         }
 
         protected override void OnStart()

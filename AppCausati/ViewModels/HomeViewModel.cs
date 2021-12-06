@@ -17,21 +17,27 @@ namespace AppCausati.ViewModels
             {
                 new OfertaExclusiva
                 {
-                    Name = "Casual T-shirt",
-                    Price = "$150.00",
-                    Image = "LaptopInicio.jpg"
+                    Name = "LaptopHP",
+                    Price = "S/2850.00",
+                    Image = "LaptopHP.jpg"
                 },
                 new OfertaExclusiva
                 {
-                    Name = "Casual T-shirt",
-                    Price = "$150.00",
-                    Image = "LaptopInicio.jpg"
+                    Name = "Zapatillas DC",
+                    Price = "S/250.00",
+                    Image = "ZapatillasInicio.jpg"
                 },
                 new OfertaExclusiva
                 {
-                    Name = "Casual T-shirt",
-                    Price = "$150.00",
+                    Name = "Polera Tiger",
+                    Price = "S/150.00",
                     Image = "polera.jpg"
+                },
+                new OfertaExclusiva
+                {
+                    Name = "Jacket Champion",
+                    Price = "$150.00",
+                    Image = "CasacaHombre.jpg"
                 },
             };
 

@@ -2,7 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCausati.Views.LoginPage"
-             BackgroundColor="White">
+             BackgroundColor="White"
+             xmlns:vm="clr-namespace:AppCausati.ViewModels"
+             Visual="Material">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout Padding="29" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
@@ -41,12 +46,12 @@
 
             <ScrollView>
 
-                <Entry x:Name="txtEmail" Placeholder="Email" Keyboard="Email" Text="{Binding EmailTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}" ></Entry>
+                <Entry  Placeholder="Email" Keyboard="Email" Text="{Binding Username}" ></Entry>
 
             </ScrollView>
             <ScrollView>
 
-                <Entry x:Name="txtContrasena" Placeholder="**************" IsPassword="True" Text="{Binding PasswordTxt, Mode=TwoWay}" IsEnabled="{Binding IsEnabledTxt}"></Entry>
+                <Entry  Placeholder="**************" IsPassword="True" Text="{Binding Password}"></Entry>
 
             </ScrollView>
             <Label Grid.Row="2"
@@ -75,9 +80,8 @@
                     HeightRequest="52"
                     WidthRequest="1400"
                     CornerRadius="30"
-                    x:Name="btnIniciarSesion"
                     Command="{Binding LoginCommand}"
-                    IsEnabled="{Binding IsEnabledTxt}"
+                    
                     />
             
             <Label Grid.Row="2"
